@@ -20,6 +20,9 @@ export default class BottomSection extends React.Component {
               return <Forcastday day={day.day} key={idx} />;
             })}
         </div>
+        <div className="bottom-word">
+            Powered by React © 2019
+         </div>
       </div>
     );
   }

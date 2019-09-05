@@ -21,14 +21,17 @@ body,
   height: 500px;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  box-shadow: #999, 10px;
 }
 .app-container .main-container .top-section {
   flex: 0 0 50%;
 }
 .app-container .main-container .bottom-section {
   flex: 0 0 50%;
+}
+
+.main-container{
+  border-radius: 10px;
+  box-shadow: #999, 10px;
 }
 
 .btn {
