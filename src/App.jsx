@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 import "./sass/app.scss";
@@ -23,9 +23,9 @@ class App extends Component {
 
   updateWeather() {
     const { cityName, numForcastDays } = this.state;
-    const URL = `https://api.apixu.com/v1/forecast.json?key=${WEATHER_KEY}  &q=${cityName} &days=${numForcastDays}`;
+    const WURL = `https://api.apixu.com/v1/forecast.json?key=${WEATHER_KEY}  &q=${cityName} &days=${numForcastDays}`;
     axios
-      .get(URL)
+      .get(WURL)
       .then(res => {
         return res.data;
       })
