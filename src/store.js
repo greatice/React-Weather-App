@@ -10,12 +10,12 @@ export default class Store extends React.Component {
 
     //Main App State
     this.state = {
-      appName: "Weather Up"
+      appName: "Weather Prediction"
     };
   }
 
   render() {
-    return React.Children.map(this.props.children, child => {
+    return React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, {
         ...this.state,
         eventEmitter: this.eventEmitter

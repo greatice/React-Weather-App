@@ -15,33 +15,29 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .main-container {
-    min-width: 600px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: #999, 10px;
-
-    .top-section {
-      flex: 0 0 50%;
-    }
-
-    .bottom-section {
-      flex: 0 0 50%;
-    }
-  }
+}
+.app-container .main-container {
+  min-width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: #999, 10px;
+}
+.app-container .main-container .top-section {
+  flex: 0 0 50%;
+}
+.app-container .main-container .bottom-section {
+  flex: 0 0 50%;
 }
 
 .btn {
   border: 1px solid #ddd;
   margin: 15px 0;
   cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
+}
+.btn:focus {
+  outline: none;
 }
 
 .popup-container {
@@ -62,11 +58,13 @@ body,
 .form-container {
   padding: 6px;
   width: 100%;
-  label {
-    font-size: 11px;
-  }
-  input {
-    border-radius: 2px;
-    border: 1px solid rgba(15, 15, 15, 0.2);
-  }
 }
+.form-container label {
+  font-size: 11px;
+}
+.form-container input {
+  border-radius: 2px;
+  border: 1px solid rgba(15, 15, 15, 0.2);
+}
+
+/*# sourceMappingURL=app.css.map */

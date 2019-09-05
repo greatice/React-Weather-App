@@ -1,9 +1,6 @@
 import React from "react";
-
 import "./style.scss";
-
 import Weather from "./weather";
-
 import { Manager, Reference, Popper } from "react-popper";
 
 export default class TopSection extends React.Component {
@@ -39,7 +36,7 @@ export default class TopSection extends React.Component {
 
     return (
       <div className="top-container">
-        <div className="title">Weather Up</div>
+        <div className="title">Weather Prediction</div>
         <Weather {...this.props} />
         <Manager>
           <Reference>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import logo from "./logo.svg";
 import "./App.css";
 
 import "./sass/app.scss";
@@ -9,21 +8,21 @@ import BottomSection from "./components/bottom/index";
 
 import axios from "axios";
 
-const WEATHER_KEY = "05fa14e773434825be0193343191301";
+const API_KEY = "05fa14e773434825be0193343191301";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       cityName: "London",
-      numForcastDays: 4,
+      numForcastDays: 5,
       isLoading: true
     };
   }
 
   updateWeather() {
     const { cityName, numForcastDays } = this.state;
-    const WURL = `https://api.apixu.com/v1/forecast.json?key=${WEATHER_KEY}  &q=${cityName} &days=${numForcastDays}`;
+    const WURL = `https://api.apixu.com/v1/forecast.json?key=${API_KEY}  &q=${cityName} &days=${numForcastDays}`;
     axios
       .get(WURL)
       .then(res => {
@@ -68,7 +67,7 @@ class App extends Component {
     return (
       <div className="app-container">
         <div className="main-container">
-          {isLoading && <h3>Loading Weather...</h3>}
+          {isLoading && <h3>Searching Weather...</h3>}
           {!isLoading && (
             <div className="top-section">
               <TopSection
